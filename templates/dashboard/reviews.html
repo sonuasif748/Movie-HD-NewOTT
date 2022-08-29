@@ -1,0 +1,211 @@
+{% extends 'dashboard/base.html' %}
+{% block content %}
+    <!-- main content -->
+    <main class="main">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- main title -->
+                <div class="col-12">
+                    <div class="main__title">
+                        <h2>Payment History</h2>
+
+                        <span class="main__title-stat">9,071 Total</span>
+
+                        <div class="main__title-wrap">
+                            <!-- filter sort -->
+                            <div class="filter" id="filter__sort">
+                                <span class="filter__item-label">Sort by:</span>
+
+                                <div class="filter__item-btn dropdown-toggle" role="navigation" id="filter-sort"
+                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <input type="button" value="Date created">
+                                    <span></span>
+                                </div>
+
+                                <ul class="filter__item-menu dropdown-menu scrollbar-dropdown"
+                                    aria-labelledby="filter-sort">
+                                    <li>Date created</li>
+                                    <li>Rating</li>
+                                </ul>
+                            </div>
+                            <!-- end filter sort -->
+
+                            <!-- search -->
+                            <form action="#" class="main__title-form">
+                                <input type="text" placeholder="Key word..">
+                                <button type="button">
+                                    <i class="icon ion-ios-search"></i>
+                                </button>
+                            </form>
+                            <!-- end search -->
+                        </div>
+                    </div>
+                </div>
+                <!-- end main title -->
+                <div class="row row--grid">
+
+
+                    <!-- stats -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="stats">
+                            <span>Total Basic Amount</span>
+                            <p>₹490</p>
+                            <i class="icon ion-ios-star-half"></i>
+                        </div>
+                    </div>
+                    <!-- end stats -->
+
+                    <!-- stats -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="stats">
+                            <span>Total Sliver Amount</span>
+                            <p>₹1290</p>
+                            <i class="icon ion-ios-star-half"></i>
+                        </div>
+                    </div>
+                    <!-- end stats -->
+
+                    <!-- stats -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="stats">
+                            <span>Total Gold Amount</span>
+                            <p>₹4999</p>
+                            <i class="icon ion-ios-star-half"></i>
+                        </div>
+                    </div>
+                    <!-- end stats -->
+
+                    <!-- stats -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="stats">
+                            <span>Total Premium Amount</span>
+                            <p>₹95646</p>
+                            <i class="icon ion-ios-star-half"></i>
+                        </div>
+                    </div>
+
+
+                    <!-- main title -->
+                    <div class="col-12">
+                        <div class="main__title">
+                            <h2>History</h2>
+
+                            <!-- end filter sort -->
+
+                            <!-- search -->
+                            <form action="#" class="main__title-form ml-auto">
+                                <input type="text" placeholder="Find User">
+                                <button type="button">
+                                    <i class="icon ion-ios-search"></i>
+                                </button>
+                            </form>
+                            <!-- end search -->
+                        </div>
+                    </div>
+                </div>
+                <!-- reviews -->
+                <div class="col-12">
+                    <div class="main__table-wrap">
+                        <table class="main__table">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>USERNAME</th>
+                                <th>MOBILE NUMBER</th>
+                                <th>PAYMENT MODE</th>
+                                <th>TRANSACTION ID</th>
+                                <th>PLAN</th>
+                                <th>EXPIRED DATE</th>
+                            </tr>
+                            </thead>
+                            {% for i in um %}
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="main__table-text">{{ forloop.counter }}</div>
+                                    </td>
+                                    <td>
+                                        <div class="main__table-text"><a
+                                                href="#">{{ i.user_membership.user.username }}</a></div>
+                                    </td>
+                                    <td>
+                                        <div class="main__table-text">9876543210</div>
+                                    </td>
+                                    <td>
+                                        <div class="main__table-text">RAZOPAY</div>
+                                    </td>
+                                    <td>
+                                        <div class="main__table-text">{{ i.user_membership.order_id }}</div>
+                                    </td>
+                                    <td>
+                                        <div class="main__table-text main__table-text--rate"><i
+                                                class="icon ion-ios-star"></i>{{ i.user_membership.membership }}</div>
+                                    </td>
+                                    <td>
+                                        <div class="main__table-text">{{ i.expires_in }}</div>
+                                    </td>
+
+
+                                </tr>
+                                </tbody>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+                <!-- end reviews -->
+
+                <!-- paginator -->
+                <div class="col-12">
+                    <div class="paginator-wrap">
+                        <span>10 from 9 071</span>
+
+                        <ul class="paginator">
+                            <li class="paginator__item paginator__item--prev">
+                                <a href="#"><i class="icon ion-ios-arrow-back"></i></a>
+                            </li>
+                            <li class="paginator__item"><a href="#">1</a></li>
+                            <li class="paginator__item paginator__item--active"><a href="#">2</a></li>
+                            <li class="paginator__item"><a href="#">3</a></li>
+                            <li class="paginator__item"><a href="#">4</a></li>
+                            <li class="paginator__item paginator__item--next">
+                                <a href="#"><i class="icon ion-ios-arrow-forward"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end paginator -->
+            </div>
+        </div>
+    </main>
+    <!-- end main content -->
+
+    <!-- modal view -->
+    <div id="modal-view" class="zoom-anim-dialog mfp-hide modal modal--view">
+        <div class="reviews__autor">
+            <img class="reviews__avatar" src="img/user.svg" alt="">
+            <span class="reviews__name">Best Marvel movie in my opinion</span>
+            <span class="reviews__time">24.08.2018, 17:53 by John Doe</span>
+
+            <span class="reviews__rating"><i class="icon ion-ios-star"></i>8.4</span>
+        </div>
+        <p class="reviews__text">There are many variations of passages of Lorem Ipsum available, but the majority have
+            suffered alteration in some form, by injected humour, or randomised words which don't look even slightly
+            believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
+            embarrassing hidden in the middle of text.</p>
+    </div>
+    <!-- end modal view -->
+
+    <!-- modal delete -->
+    <div id="modal-delete" class="zoom-anim-dialog mfp-hide modal">
+        <h6 class="modal__title">Review delete</h6>
+
+        <p class="modal__text">Are you sure to permanently delete this review?</p>
+
+        <div class="modal__btns">
+            <button class="modal__btn modal__btn--apply" type="button">Delete</button>
+            <button class="modal__btn modal__btn--dismiss" type="button">Dismiss</button>
+        </div>
+    </div>
+    <!-- end modal delete -->
+
+{% endblock %}

@@ -1,0 +1,375 @@
+{% extends 'base.html' %}
+{% block body %}
+    {% load static %}
+
+    <!-- HERO SECTION -->
+
+    <br><br>
+    <!-- owl-carousel Banner Start -->
+
+    <!-- LATEST MOVIES SECTION -->
+    <div class="section">
+        <div class="container">
+            <div class="section-header">
+                Tollywood Movies
+                <a href="/telugu" style="text-align: left; padding-left: 850px" ;>
+                    <span>View all</span>
+                </a>
+            </div>
+
+            <div class="movies-slide carousel-nav-center owl-carousel">
+                <!-- MOVIE ITEM -->
+                {% for i in tm %}
+                    <a href="{% url 'moviedetail' i.id %}" class="movie-item">
+                        {% if i.screen_shot %}
+                            <img src="{{ i.screen_shot.url }}" alt="" style="width:100%;height:100%">
+                        {% endif %}
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                {{ i.title }}
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="bx bxs-time"></i>
+                                    <span>{{ i.movie_length }}</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>HD</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>16+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+                <!-- END MOVIE ITEM -->
+            </div>
+        </div>
+    </div>
+    <!-- END LATEST MOVIES SECTION -->
+
+    <!-- LATEST SERIES SECTION -->
+    <div class="section">
+        <div class="container">
+            <div class="section-header">
+                Mollywood Movies
+                <a href="/malayalam" style="text-align: left; padding-left: 850px" ;>
+                    <span>View all</span>
+                </a>
+            </div>
+            <div class="movies-slide carousel-nav-center owl-carousel">
+                <!-- MOVIE ITEM -->
+                {% for i in mm %}
+                    <a href="{% url 'moviedetail' i.id %}" class="movie-item">
+                        {% if i.screen_shot %}
+                            <img src="{{ i.screen_shot.url }}" alt="" style="width:100%;height:100%">
+                        {% endif %}
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                {{ i.title }}
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="bx bxs-time"></i>
+                                    <span>{{ i.movie_length }}</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>HD</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>16+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+                <!-- END MOVIE ITEM -->
+            </div>
+        </div>
+    </div>
+    <!-- END LATEST SERIES SECTION -->
+
+    <!-- LATEST CARTOONS SECTION -->
+    <div class="section">
+        <div class="container">
+            <div class="section-header">
+                Kollywood Movies
+                <a href="/tamil" style="text-align: left; padding-left: 850px" ;>
+                    <span>View all</span>
+                </a>
+            </div>
+            <div class="movies-slide carousel-nav-center owl-carousel">
+                <!-- MOVIE ITEM -->
+                {% for i in tam %}
+                    <a href="{% url 'moviedetail' i.id %}" class="movie-item">
+                        {% if i.screen_shot %}
+                            <img src="{{ i.screen_shot.url }}" alt="" style="width:100%;height:100%">
+                        {% endif %}
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                {{ i.title }}
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="bx bxs-time"></i>
+                                    <span>{{ i.movie_length }}</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>HD</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>16+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+                <!-- END MOVIE ITEM -->
+            </div>
+        </div>
+    </div>
+    <!-- END LATEST CARTOONS SECTION -->
+    <!-- LATEST CARTOONS SECTION -->
+    <div class="section">
+        <div class="container">
+            <div class="section-header">
+                Bollywood Movies
+                <a href="/hindi" style="text-align: left; padding-left: 850px" ;>
+                    <span>View all</span>
+                </a>
+            </div>
+            <div class="movies-slide carousel-nav-center owl-carousel">
+                <!-- MOVIE ITEM -->
+                {% for i in hm %}
+                    <a href="{% url 'moviedetail' i.id %}" class="movie-item">
+                        {% if i.screen_shot %}
+                            <img src="{{ i.screen_shot.url }}" alt="" style="width:100%;height:100%">
+                        {% endif %}
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                {{ i.title }}
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="bx bxs-time"></i>
+                                    <span>{{ i.movie_length }}</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>HD</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>16+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+                <!-- END MOVIE ITEM -->
+            </div>
+        </div>
+    </div>
+    <!-- END LATEST CARTOONS SECTION -->
+    <!-- LATEST CARTOONS SECTION -->
+    <div class="section">
+        <div class="container">
+            <div class="section-header">
+                Hollywood Movies
+                <a href="/english" style="text-align: left; padding-left: 850px" ;>
+                    <span>View all</span>
+                </a>
+            </div>
+            <div class="movies-slide carousel-nav-center owl-carousel">
+                <!-- MOVIE ITEM -->
+                {% for i in em %}
+                    <a href="{% url 'moviedetail' i.id %}" class="movie-item">
+                        {% if i.screen_shot %}
+                            <img src="{{ i.screen_shot.url }}" alt="" style="width:100%;height:100%">
+                        {% endif %}
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                {{ i.title }}
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="bx bxs-time"></i>
+                                    <span>{{ i.movie_length }}</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>HD</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>16+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+                <!-- END MOVIE ITEM -->
+
+            </div>
+        </div>
+    </div>
+    <!-- END LATEST CARTOONS SECTION -->
+    <!-- SPECIAL MOVIE SECTION -->
+    <br>
+{#    <section class="card-section">#}
+{#        <div class="container-fluid">#}
+{#            <div class="card-group">#}
+{#                <div class="card" style="background-color: black; font-weight: bold">#}
+{#                    <div class="card-body text-center">#}
+{#                        <p>Telugu movies</p>#}
+{#                        <p><a class="link" href="#">Acharya</a></p>#}
+{#                        <p><a class="link" href="#">Krack</a></p>#}
+{#                        <p><a class="link" href="#">Uppena</a></p>#}
+{#                        <p><a class="link" href="#">Sahoo</a></p>#}
+{#                        <p><a class="link" href="#">Palasa</a></p>#}
+{#                        <p><a class="link" href="#">Maharshi</a></p>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="card" style="background-color: black;font-weight: bold">#}
+{#                    <div class="card-body text-center">#}
+{#                        <p>Hindi movies</p>#}
+{#                        <p><a class="link" href="#">Dhoom3</a></p>#}
+{#                        <p><a class="link" href="#">Kalank</a></p>#}
+{#                        <p><a class="link" href="#">PK</a></p>#}
+{#                        <p><a class="link" href="#">3 Idoits</a></p>#}
+{#                        <p><a class="link" href="#">Masoom</a></p>#}
+{#                        <p><a class="link" href="#">Andhadun</a></p>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="card" style="background-color: black;font-weight: bold">#}
+{#                    <div class="card-body text-center">#}
+{#                        <p>Malayalam Movies</p>#}
+{#                        <p><a class="link" href="#">Joji</a></p>#}
+{#                        <p><a class="link" href="#">Ayyapanum Koshiyanum</a></p>#}
+{#                        <p><a class="link" href="#">Anjaan Pathira</a></p>#}
+{#                        <p><a class="link" href="#">Virus</a></p>#}
+{#                        <p><a class="link" href="#">Jallikattu</a></p>#}
+{#                        <p><a class="link" href="#">Premam</a></p>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="card" style="background-color: black;font-weight: bold">#}
+{#                    <div class="card-body text-center">#}
+{#                        <p>Tamil movies</p>#}
+{#                        <p><a class="link" href="#">Ratsasan</a></p>#}
+{#                        <p><a class="link" href="#">Super Deluxe</a></p>#}
+{#                        <p><a class="link" href="#">Pariyerum Perumal</a></p>#}
+{#                        <p><a class="link" href="#">Mandela</a></p>#}
+{#                        <p><a class="link" href="#">Chakra</a></p>#}
+{#                        <p><a class="link" href="#">96</a></p>#}
+{##}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="card" style="background-color: black;font-weight: bold">#}
+{#                    <div class="card-body text-center">#}
+{#                        <p>Genres</p>#}
+{#                        <p><a class="link" href="#">Action</a></p>#}
+{#                        <p><a class="link" href="#">Thriller</a></p>#}
+{#                        <p><a class="link" href="#">Drama</a></p>#}
+{#                        <p><a class="link" href="#">Crime</a></p>#}
+{#                        <p><a class="link" href="#">Kids</a></p>#}
+{#                        <p><a class="link" href="#">Mythological</a></p>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
+{#    <br>#}
+     <!-- section -->
+    <section class="section section--border">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-xl-10">
+                    <h2 class="section__title section__title--mb"><b>FILMLOVERS</b> – Best Place for Movies</h2>
+
+                    <p class="section__text">It is a long established fact that a reader will be distracted by the
+                        readable content of a page when looking at its layout. The point of <b>using Lorem</b> Ipsum is
+                        that it has a more-or-less normal distribution of letters, as opposed to using. Many desktop
+                        publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
+                        search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+
+                    <p class="section__text">Content here, content here, making it look like <a href="#">readable</a>
+                        English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their
+                        default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
+                        infancy. Various versions have evolved over the years, sometimes by accident, sometimes on
+                        purpose (injected humour and the like).</p>
+                </div>
+            </div>
+
+            <div class="row row--grid">
+                <!-- price -->
+                <div class="col-12 col-md-6 col-lg-4 order-md-2 order-lg-1">
+                    <div class="price">
+                        <div class="price__item price__item--first"><span>Basic</span> <span>Free</span></div>
+                        <div class="price__item"><span><i class="icon ion-ios-checkmark"></i> 7 days</span></div>
+                        <div class="price__item"><span><i class="icon ion-ios-checkmark"></i> 720p Resolution</span>
+                        </div>
+                        <div class="price__item price__item--none"><span><i class="icon ion-ios-close"></i> Limited Availability</span>
+                        </div>
+                        <div class="price__item price__item--none"><span><i class="icon ion-ios-close"></i> Desktop Only</span>
+                        </div>
+                        <div class="price__item price__item--none"><span><i class="icon ion-ios-close"></i> Limited Support</span>
+                        </div>
+                        <a href="#" class="price__btn">Choose Plan</a>
+                    </div>
+                </div>
+                <!-- end price -->
+
+                <!-- price -->
+                <div class="col-12 col-md-12 col-lg-4 order-md-1 order-lg-2">
+                    <div class="price price--premium">
+                        <div class="price__item price__item--first"><span>Premium</span> <span>$34.99 <sub>/ month</sub></span>
+                        </div>
+                        <div class="price__item"><span><i class="icon ion-ios-checkmark"></i> 1 Month</span></div>
+                        <div class="price__item"><span><i class="icon ion-ios-checkmark"></i> Full HD</span></div>
+                        <div class="price__item"><span><i
+                                class="icon ion-ios-checkmark"></i> Lifetime Availability</span></div>
+                        <div class="price__item price__item--none"><span><i class="icon ion-ios-close"></i> TV & Desktop</span>
+                        </div>
+                        <div class="price__item price__item--none"><span><i class="icon ion-ios-close"></i> 24/7 Support</span>
+                        </div>
+                        <a href="#" class="price__btn">Choose Plan</a>
+                    </div>
+                </div>
+                <!-- end price -->
+
+                <!-- price -->
+                <div class="col-12 col-md-6 col-lg-4 order-md-3">
+                    <div class="price">
+                        <div class="price__item price__item--first"><span>Cinematic</span>
+                            <span>$49.99 <sub>/ month</sub></span></div>
+                        <div class="price__item"><span><i class="icon ion-ios-checkmark"></i> 2 Months</span></div>
+                        <div class="price__item"><span><i class="icon ion-ios-checkmark"></i> Ultra HD</span></div>
+                        <div class="price__item"><span><i
+                                class="icon ion-ios-checkmark"></i> Lifetime Availability</span></div>
+                        <div class="price__item"><span><i class="icon ion-ios-checkmark"></i> Any Device</span></div>
+                        <div class="price__item"><span><i class="icon ion-ios-checkmark"></i> 24/7 Support</span></div>
+                        <a href="#" class="price__btn">Choose Plan</a>
+                    </div>
+                </div>
+                <!-- end price -->
+            </div>
+        </div>
+    </section>
+{% endblock body %}

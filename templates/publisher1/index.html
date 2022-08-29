@@ -1,0 +1,206 @@
+{% extends 'publisher1/pub_base.html' %}
+{% block content %}
+    <!-- main content -->
+    <main class="main">
+        <div class="container-fluid">
+            <div class="row row--grid">
+                <!-- main title -->
+                <div class="col-12">
+                    <div class="main__title">
+                        <h2>publisher</h2>
+
+                        <a href="/padd" class="main__title-link">add item</a>
+
+                    </div>
+                </div>
+                <!-- end main title -->
+
+                <!-- stats -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="stats">
+                        <span>Total Movies</span>
+                        <p>{{ count }}</p>
+                        <i class="icon ion-ios-stats"></i>
+                    </div>
+                </div>
+                <!-- end stats -->
+
+                <!-- stats -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="stats">
+                        <span>Total Users</span>
+                        <p>{{ count1 }}</p>
+                        <i class="icon ion-ios-film"></i>
+                    </div>
+                </div>
+                <!-- end stats -->
+
+                <!-- stats -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="stats">
+                        <span>Number of Subscription</span>
+                        <p>2 573</p>
+                        <i class="icon ion-ios-chatbubbles"></i>
+                    </div>
+                </div>
+                <!-- end stats -->
+
+                <!-- stats -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="stats">
+                        <span>Total Amount</span>
+                        <p>11,021</p>
+                        <i class="icon ion-ios-star-half"></i>
+                    </div>
+                </div>
+                <!-- end stats -->
+
+
+                <div class="row">
+                    <!-- main title -->
+                    <div class="col-12">
+                        <div class="main__title">
+                            <h2>Movies list</h2>
+
+                            {#						<span class="main__title-stat">14,452 Total</span>#}
+                            {##}
+                            <div class="main__title-wrap">
+                                {#							<!-- filter sort -->#}
+                                {#							<div class="filter" id="filter__sort">#}
+                                {#								<span class="filter__item-label">Sort by:</span>#}
+                                {##}
+                                {#								<div class="filter__item-btn dropdown-toggle" role="navigation" id="filter-sort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
+                                {#									<input type="button" value="Date created">#}
+                                {#									<span></span>#}
+                                {#								</div>#}
+                                {##}
+                                {#								<ul class="filter__item-menu dropdown-menu scrollbar-dropdown" aria-labelledby="filter-sort">#}
+                                {#									<li>Date created</li>#}
+                                {#									<li>Rating</li>#}
+                                {#									<li>Views</li>#}
+                                {#								</ul>#}
+                                {#							</div>#}
+                                <!-- end filter sort -->
+
+                                <!-- search -->
+                                <form action="#" class="main__title-form">
+                                    <input type="text" placeholder="Find movie / tv series..">
+                                    <button type="button">
+                                        <i class="icon ion-ios-search"></i>
+                                    </button>
+                                </form>
+                                <!-- end search -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end main title -->
+
+                    <!-- users -->
+                    <div class="col-12">
+                        <div class="main__table-wrap">
+                            <table class="main__table">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>TITLE</th>
+                                    <th>CAST</th>
+                                    <th>UPLOADER NAME</th>
+                                    <th>GENERS</th>
+                                    <th>LANGUAGE</th>
+                                    <th>STATUS</th>
+                                    {#                                    <th>STATUS</th>#}
+
+
+                                </tr>
+                                </thead>
+                                {% for i in page.object_list %}
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="main__table-text">{{ i.id }}</div>
+                                        </td>
+                                        <td>
+                                            <div class="main__table-text"><a href="#">{{ i.title }}</a></div>
+                                        </td>
+                                        <td>
+                                            <div class="main__table-text">{{ i.actor_name }}</div>
+                                        </td>
+                                        <td>
+                                            <div class="main__table-text">{{ i.uploader_name }}</div>
+                                        </td>
+                                        <td>
+                                            <div class="main__table-text">{{ i.geners }}</div>
+                                        </td>
+                                        <td>
+                                            <div class="main__table-text">{{ i.language }}</div>
+                                        </td>
+
+                                        <td>
+                                            {% if i.status == 0 %}
+                                                <div class="main__table-text" style="color: red">Inactive</div>
+                                            {% else %}
+                                                <div class="main__table-text" style="color: green">Active</a>
+                                                </div>
+                                            {% endif %}
+
+                                        </td>
+                                        {#                                    <td>#}
+                                        {#										<div class="main__table-text">{{i.status }}</div>#}
+                                        {#									</td>#}
+                                        {#									<td>#}
+                                        {#										<div class="main__table-btns">#}
+                                        {#											<a href="#modal-status" class="main__table-btn main__table-btn--banned open-modal">#}
+                                        {#												<i class="icon ion-ios-lock"></i>#}
+                                        {#											</a>#}
+                                        {#											<a href="#" class="main__table-btn main__table-btn--view">#}
+                                        {#												<i class="icon ion-ios-eye"></i>#}
+                                        {#											</a>#}
+                                        {#											<a href="#" class="main__table-btn main__table-btn--edit">#}
+                                        {#												<i class="icon ion-ios-create"></i>#}
+                                        {#											</a>#}
+                                        {#											<a href="#modal-delete" class="main__table-btn main__table-btn--delete open-modal">#}
+                                        {#												<i class="icon ion-ios-trash"></i>#}
+                                        {#											</a>#}
+                                        {#										</div>#}
+                                        {#									</td>#}
+                                    </tr>
+
+                                    </tbody>
+                                {% endfor %}
+                            </table>
+                        </div>
+                    </div>
+                    <!-- end users -->
+
+                    <!-- paginator -->
+                    <div class="col-12">
+                        <div class="paginator-wrap">
+                            <span>Page Numbers</span>
+
+
+                            <ul class="paginator">
+                                {% if page.has_previous %}
+                                    <li class="paginator__item paginator__item--prev">
+                                        <a href="{% url 'publish' %}?page={{ page.previous_page_number }}"><i
+                                                class="icon ion-ios-arrow-back"></i></a>
+                                    </li>
+                                {% endif %}
+
+                                <li class="paginator__item paginator__item--active"><a href="#">{{ page.number }}</a>
+                                </li>
+                                {% if page.has_next %}
+                                    <li class="paginator__item paginator__item--next">
+                                        <a href="{% url 'publish' %}?page={{ page.next_page_number }}"><i
+                                                class="icon ion-ios-arrow-forward"></i></a>
+                                    </li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end paginator -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- end main content -->
+{% endblock %}

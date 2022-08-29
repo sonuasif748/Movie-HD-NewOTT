@@ -1,0 +1,1067 @@
+{% extends 'logout.html' %}
+{% block body %}
+
+    {% load static %}
+
+
+    <!-- HERO SECTION -->
+    <div class="hero-section">
+        <!-- HERO SLIDE -->
+        <div class="hero-slide">
+            <div class="owl-carousel carousel-nav-center" id="hero-carousel">
+                <!-- SLIDE ITEM -->
+                <div class="hero-slide-item">
+                    <img src="{% static '/images/Drakula.jpg' %}" alt="">
+                    <div class="overlay"></div>
+                    <div class="hero-slide-item-content">
+                        <div class="item-content-wraper">
+                            <div class="item-content-title top-down">
+                                Dracula
+                            </div>
+                            <div class="movie-infos top-down delay-2">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="bx bxs-time"></i>
+                                    <span>120 mins</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>HD</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>16+</span>
+                                </div>
+                            </div>
+                            <div class="item-content-description top-down delay-4">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, possimus eius. Deserunt
+                                non odit, cum vero reprehenderit laudantium odio vitae autem quam, incidunt molestias
+                                ratione mollitia accusantium, facere ab suscipit.
+                            </div>
+                            <div class="item-action top-down delay-6">
+                                <a href="https://www.youtube.com/watch?v=P41KJkIq7CU" allow-fullscreen class="btn btn-hover">
+                                    <i class='bx bx-play-circle'></i>
+                                    <span>Play now</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END SLIDE ITEM -->
+                <!-- SLIDE ITEM -->
+                <div class="hero-slide-item">
+                    <img src="{% static '/images/spiderman.jpg' %}" alt="">
+                    <div class="overlay"></div>
+                    <div class="hero-slide-item-content">
+                        <div class="item-content-wraper">
+                            <div class="item-content-title top-down">
+                                Spiderman
+                            </div>
+                            <div class="movie-infos top-down delay-2">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="bx bxs-time"></i>
+                                    <span>120 mins</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>HD</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>16+</span>
+                                </div>
+                            </div>
+                            <div class="item-content-description top-down delay-4">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, possimus eius. Deserunt
+                                non odit, cum vero reprehenderit laudantium odio vitae autem quam, incidunt molestias
+                                ratione mollitia accusantium, facere ab suscipit.
+                            </div>
+                            <div class="item-action top-down delay-6">
+                                <a href="#" class="btn btn-hover">
+                                    <i class='bx bx-play-circle'></i>
+                                    <span>Play now</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END SLIDE ITEM -->
+                <!-- SLIDE ITEM -->
+                <div class="hero-slide-item">
+                    <img src="{% static '/images/Avatar.jpg' %}" alt="">
+                    <div class="overlay"></div>
+                    <div class="hero-slide-item-content">
+                        <div class="item-content-wraper">
+                            <div class="item-content-title top-down">
+                                Avatar
+                            </div>
+                            <div class="movie-infos top-down delay-2">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="bx bxs-time"></i>
+                                    <span>120 mins</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>HD</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>16+</span>
+                                </div>
+                            </div>
+                            <div class="item-content-description top-down delay-4">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, possimus eius. Deserunt
+                                non odit, cum vero reprehenderit laudantium odio vitae autem quam, incidunt molestias
+                                ratione mollitia accusantium, facere ab suscipit.
+                            </div>
+                            <div class="item-action top-down delay-6">
+                                <a href="#" class="btn btn-hover">
+                                    <i class='bx bx-play-circle'></i>
+                                    <span>Play now</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END SLIDE ITEM -->
+            </div>
+        </div>
+        <br>
+        <!-- END HERO SLIDE -->
+        <!-- LATEST SLIDE -->
+        <div class="section">
+            <div class="container">
+                <div class="section-header">
+                    Latest Movies
+                </div>
+                <div class="top-movies-slide">
+                    <div class="owl-carousel" id="top-movies-slide">
+                        <!-- MOVIE ITEM -->
+                        <div class="movie-item">
+                            <img src="{% static '/images/series/supergirl.jpg' %}" alt="">
+                            <div class="movie-item-content">
+                                <div class="movie-item-title">
+                                    Supergirl
+                                </div>
+                                <div class="movie-infos">
+                                    <div class="movie-info">
+                                        <i class="bx bxs-star"></i>
+                                        <span>9.5</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <i class="bx bxs-time"></i>
+                                        <span>120 mins</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>HD</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>16+</span>
+                                    </div>
+									<a href="#" class="btn btn-hover">
+                                    <i class='bx bx-play-circle'></i>
+                                    <span>Play now</span>
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- END MOVIE ITEM -->
+                        <!-- MOVIE ITEM -->
+
+                        <div class="movie-item">
+                            <img src="{% static '/images/movies/captain-marvel.png' %}" alt="">
+                            <div class="movie-item-content">
+                                <div class="movie-item-title">
+                                    Captain Marvel
+                                </div>
+                                <div class="movie-infos">
+                                    <div class="movie-info">
+                                        <i class="bx bxs-star"></i>
+                                        <span>9.5</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <i class="bx bxs-time"></i>
+                                        <span>120 mins</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>HD</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>16+</span>
+                                    </div>
+                                    <a href="#" class="btn btn-hover">
+                                    <i class='bx bx-play-circle'></i>
+                                    <span>Play now</span>
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END MOVIE ITEM -->
+                        <!-- MOVIE ITEM -->
+                        <div class="movie-item">
+                            <img src="{% static '/images/telugu/acharya.jpg' %}" alt="">
+                            <div class="movie-item-content">
+                                <div class="movie-item-title">
+                                    Acharya
+                                </div>
+                                <div class="movie-infos">
+                                    <div class="movie-info">
+                                        <i class="bx bxs-star"></i>
+                                        <span>9.5</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <i class="bx bxs-time"></i>
+                                        <span>120 mins</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>HD</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>16+</span>
+                                    </div>
+                                    <a href="#" class="btn btn-hover">
+                                    <i class='bx bx-play-circle'></i>
+                                    <span>Play now</span>
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END MOVIE ITEM -->
+                        <!-- MOVIE ITEM -->
+                        <div class="movie-item">
+                            <img src="{% static '/images/telugu/krack.jpg' %}" alt="">
+                            <div class="movie-item-content">
+                                <div class="movie-item-title">
+                                    Krack
+                                </div>
+                                <div class="movie-infos">
+                                    <div class="movie-info">
+                                        <i class="bx bxs-star"></i>
+                                        <span>9.5</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <i class="bx bxs-time"></i>
+                                        <span>120 mins</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>HD</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>16+</span>
+                                    </div>
+                                    <a href="#" class="btn btn-hover">
+                                    <i class='bx bx-play-circle'></i>
+                                    <span>Play now</span>
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END MOVIE ITEM -->
+                        <!-- MOVIE ITEM -->
+                        <div class="movie-item">
+                            <img src="{% static '/images/hindi/2.jpg' %}" alt="">
+                            <div class="movie-item-content">
+                                <div class="movie-item-title">
+                                    Bhuj
+                                </div>
+                                <div class="movie-infos">
+                                    <div class="movie-info">
+                                        <i class="bx bxs-star"></i>
+                                        <span>9.5</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <i class="bx bxs-time"></i>
+                                        <span>120 mins</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>HD</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>16+</span>
+                                    </div>
+                                    <a href="#" class="btn btn-hover">
+                                    <i class='bx bx-play-circle'></i>
+                                    <span>Play now</span>
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END MOVIE ITEM -->
+                        <!-- MOVIE ITEM -->
+                        <div class="movie-item">
+                            <img src="{% static '/images/movies/bat-man.jpg' %}" alt="">
+                            <div class="movie-item-content">
+                                <div class="movie-item-title">
+                                    The Dark Knight
+                                </div>
+                                <div class="movie-infos">
+                                    <div class="movie-info">
+                                        <i class="bx bxs-star"></i>
+                                        <span>9.5</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <i class="bx bxs-time"></i>
+                                        <span>120 mins</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>HD</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>16+</span>
+                                    </div>
+                                    <a href="#" class="btn btn-hover">
+                                    <i class='bx bx-play-circle'></i>
+                                    <span>Play now</span>
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END MOVIE ITEM -->
+                    </div>
+                </div>
+                <!-- END TOP MOVIES SLIDE -->
+            </div>
+            <!-- END HERO SECTION -->
+
+            <!-- LATEST MOVIES SECTION -->
+            <div class="section">
+                <div class="container">
+                    <div class="section-header">
+                        Telugu Movies
+                    </div>
+                    <div class="movies-slide carousel-nav-center owl-carousel">
+                        <!-- MOVIE ITEM -->
+                        <a href="#" class="movie-item">
+                            <img src="{% static '/images/telugu/sahoo.jpg' %}" alt="">
+                            <div class="movie-item-content">
+                                <div class="movie-item-title">
+                                    sahoo
+                                </div>
+                                <div class="movie-infos">
+                                    <div class="movie-info">
+                                        <i class="bx bxs-star"></i>
+                                        <span>9.5</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <i class="bx bxs-time"></i>
+                                        <span>120 mins</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>HD</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>16+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- END MOVIE ITEM -->
+                        <!-- MOVIE ITEM -->
+                        <a href="#" class="movie-item">
+                            <img src="{% static '/images/telugu/krack.jpg' %}" alt="">
+                            <div class="movie-item-content">
+                                <div class="movie-item-title">
+                                    Krack
+                                </div>
+                                <div class="movie-infos">
+                                    <div class="movie-info">
+                                        <i class="bx bxs-star"></i>
+                                        <span>9.5</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <i class="bx bxs-time"></i>
+                                        <span>120 mins</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>HD</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>16+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- END MOVIE ITEM -->
+                        <!-- MOVIE ITEM -->
+                        <a href="#" class="movie-item">
+                            <img src="{% static '/images/telugu/vakeel.jpg' %}" alt="">
+                            <div class="movie-item-content">
+                                <div class="movie-item-title">
+                                    Vakeelsaab
+                                </div>
+                                <div class="movie-infos">
+                                    <div class="movie-info">
+                                        <i class="bx bxs-star"></i>
+                                        <span>9.5</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <i class="bx bxs-time"></i>
+                                        <span>120 mins</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>HD</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>16+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- END MOVIE ITEM -->
+                        <!-- MOVIE ITEM -->
+                        <a href="#" class="movie-item">
+                            <img src="{% static '/images/telugu/palsa.jpg' %}" alt="">
+                            <div class="movie-item-content">
+                                <div class="movie-item-title">
+                                    Palasa
+                                </div>
+                                <div class="movie-infos">
+                                    <div class="movie-info">
+                                        <i class="bx bxs-star"></i>
+                                        <span>9.5</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <i class="bx bxs-time"></i>
+                                        <span>120 mins</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>HD</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>16+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- END MOVIE ITEM -->
+                        <!-- MOVIE ITEM -->
+                        <a href="#" class="movie-item">
+                            <img src="{% static '/images/telugu/uppena.jpg' %}" alt="">
+                            <div class="movie-item-content">
+                                <div class="movie-item-title">
+                                    Uppena
+                                </div>
+                                <div class="movie-infos">
+                                    <div class="movie-info">
+                                        <i class="bx bxs-star"></i>
+                                        <span>9.5</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <i class="bx bxs-time"></i>
+                                        <span>120 mins</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>HD</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>16+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- END MOVIE ITEM -->
+                        <!-- MOVIE ITEM -->
+                        <a href="#" class="movie-item">
+                            <img src="{% static '/images/telugu/Krack.jpg' %}" alt="">
+                            <div class="movie-item-content">
+                                <div class="movie-item-title">
+                                    Krack
+                                </div>
+                                <div class="movie-infos">
+                                    <div class="movie-info">
+                                        <i class="bx bxs-star"></i>
+                                        <span>9.5</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <i class="bx bxs-time"></i>
+                                        <span>120 mins</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>HD</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>16+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- END MOVIE ITEM -->
+                        <!-- MOVIE ITEM -->
+                        <a href="#" class="movie-item">
+                            <img src="{% static '/images/telugu/radhe.jpg' %}" alt="">
+                            <div class="movie-item-content">
+                                <div class="movie-item-title">
+                                    Radhe
+                                </div>
+                                <div class="movie-infos">
+                                    <div class="movie-info">
+                                        <i class="bx bxs-star"></i>
+                                        <span>9.5</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <i class="bx bxs-time"></i>
+                                        <span>120 mins</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>HD</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>16+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- END MOVIE ITEM -->
+                    </div>
+                </div>
+            </div>
+            <!-- END LATEST MOVIES SECTION -->
+
+            <!-- LATEST SERIES SECTION -->
+            <div class="section">
+                <div class="container">
+                    <div class="section-header">
+                        Malayalam
+                    </div>
+                    <div class="movies-slide carousel-nav-center owl-carousel">
+                        <!-- MOVIE ITEM -->
+                        <a href="#" class="movie-item">
+                            <img src="{% static '/images/malayalam/1.jpg' %}" alt="">
+                            <div class="movie-item-content">
+                                <div class="movie-item-title">
+                                    Joji
+                                </div>
+                                <div class="movie-infos">
+                                    <div class="movie-info">
+                                        <i class="bx bxs-star"></i>
+                                        <span>9.5</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <i class="bx bxs-time"></i>
+                                        <span>120 mins</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>HD</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>16+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- END MOVIE ITEM -->
+                        <!-- MOVIE ITEM -->
+                        <a href="#" class="movie-item">
+                            <img src="{% static '/images/malayalam/2.jpg' %}" alt="">
+                            <div class="movie-item-content">
+                                <div class="movie-item-title">
+                                    malik
+                                </div>
+                                <div class="movie-infos">
+                                    <div class="movie-info">
+                                        <i class="bx bxs-star"></i>
+                                        <span>9.5</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <i class="bx bxs-time"></i>
+                                        <span>120 mins</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>HD</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>16+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- END MOVIE ITEM -->
+                        <!-- MOVIE ITEM -->
+                        <a href="#" class="movie-item">
+                            <img src="{% static 'images/malayalam/4.jpg' %}" alt="">
+                            <div class="movie-item-content">
+                                <div class="movie-item-title">
+                                    Bhoomi
+                                </div>
+                                <div class="movie-infos">
+                                    <div class="movie-info">
+                                        <i class="bx bxs-star"></i>
+                                        <span>9.5</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <i class="bx bxs-time"></i>
+                                        <span>120 mins</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>HD</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>16+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- END MOVIE ITEM -->
+                        <!-- MOVIE ITEM -->
+                        <a href="#" class="movie-item">
+                            <img src="{% static '/images/malayalam/ram.jpg ' %}" alt="">
+                            <div class="movie-item-content">
+                                <div class="movie-item-title">
+                                    Ram
+                                </div>
+                                <div class="movie-infos">
+                                    <div class="movie-info">
+                                        <i class="bx bxs-star"></i>
+                                        <span>9.5</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <i class="bx bxs-time"></i>
+                                        <span>120 mins</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>HD</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>16+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- END MOVIE ITEM -->
+                        <!-- MOVIE ITEM -->
+                        <a href="#" class="movie-item">
+                            <img src="{% static '/images/malayalam/kitchen.jpg' %}" alt="">
+                            <div class="movie-item-content">
+                                <div class="movie-item-title">
+                                    The great Indian Kitchen
+                                </div>
+                                <div class="movie-infos">
+                                    <div class="movie-info">
+                                        <i class="bx bxs-star"></i>
+                                        <span>9.5</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <i class="bx bxs-time"></i>
+                                        <span>120 mins</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>HD</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>16+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- END MOVIE ITEM -->
+                        <!-- MOVIE ITEM -->
+                        <a href="#" class="movie-item">
+                            <img src="{% static '/images/malayalam/1.jpg' %}" alt="">
+                            <div class="movie-item-content">
+                                <div class="movie-item-title">
+                                    malayalam
+                                </div>
+                                <div class="movie-infos">
+                                    <div class="movie-info">
+                                        <i class="bx bxs-star"></i>
+                                        <span>9.5</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <i class="bx bxs-time"></i>
+                                        <span>120 mins</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>HD</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>16+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- END MOVIE ITEM -->
+                        <!-- MOVIE ITEM -->
+                        <a href="#" class="movie-item">
+                            <img src="{% static '/images/series/wanda.png' %}" alt="">
+                            <div class="movie-item-content">
+                                <div class="movie-item-title">
+                                    Wanda Vision
+                                </div>
+                                <div class="movie-infos">
+                                    <div class="movie-info">
+                                        <i class="bx bxs-star"></i>
+                                        <span>9.5</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <i class="bx bxs-time"></i>
+                                        <span>120 mins</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>HD</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>16+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- END MOVIE ITEM -->
+                    </div>
+                </div>
+            </div>
+            <!-- END LATEST SERIES SECTION -->
+
+            <!-- LATEST CARTOONS SECTION -->
+            <div class="section">
+                <div class="container">
+                    <div class="section-header">
+                        Indian Movies
+                    </div>
+                    <div class="movies-slide carousel-nav-center owl-carousel">
+                        <!-- MOVIE ITEM -->
+                        <a href="#" class="movie-item">
+                            <img src="{% static '/images/Tamil/2.jpg' %}" alt="">
+                            <div class="movie-item-content">
+                                <div class="movie-item-title">
+                                    Sultan
+                                </div>
+                                <div class="movie-infos">
+                                    <div class="movie-info">
+                                        <i class="bx bxs-star"></i>
+                                        <span>9.5</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <i class="bx bxs-time"></i>
+                                        <span>120 mins</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>HD</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>16+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- END MOVIE ITEM -->
+                        <!-- MOVIE ITEM -->
+                        <a href="#" class="movie-item">
+                            <img src="{% static '/images/Hindi/2.jpg' %}" alt="">
+                            <div class="movie-item-content">
+                                <div class="movie-item-title">
+                                    Bhuj
+                                </div>
+                                <div class="movie-infos">
+                                    <div class="movie-info">
+                                        <i class="bx bxs-star"></i>
+                                        <span>9.5</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <i class="bx bxs-time"></i>
+                                        <span>120 mins</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>HD</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>16+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- END MOVIE ITEM -->
+                        <!-- MOVIE ITEM -->
+                        <a href="#" class="movie-item">
+                            <img src="{% static '/images/malayalam/ram.jpg' %}" alt="">
+                            <div class="movie-item-content">
+                                <div class="movie-item-title">
+                                    Ram
+                                </div>
+                                <div class="movie-infos">
+                                    <div class="movie-info">
+                                        <i class="bx bxs-star"></i>
+                                        <span>9.5</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <i class="bx bxs-time"></i>
+                                        <span>120 mins</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>HD</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>16+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- END MOVIE ITEM -->
+                        <!-- MOVIE ITEM -->
+                        <a href="#" class="movie-item">
+                            <img src="{% static '/images/hindi/5.jpg' %}" alt="">
+                            <div class="movie-item-content">
+                                <div class="movie-item-title">
+                                    Mr.Lalla
+                                </div>
+                                <div class="movie-infos">
+                                    <div class="movie-info">
+                                        <i class="bx bxs-star"></i>
+                                        <span>9.5</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <i class="bx bxs-time"></i>
+                                        <span>120 mins</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>HD</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>16+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- END MOVIE ITEM -->
+                        <!-- MOVIE ITEM -->
+                        <a href="#" class="movie-item">
+                            <img src="{% static '/images/telugu/krack.jpg' %}" alt="">
+                            <div class="movie-item-content">
+                                <div class="movie-item-title">
+                                    Krack
+                                </div>
+                                <div class="movie-infos">
+                                    <div class="movie-info">
+                                        <i class="bx bxs-star"></i>
+                                        <span>9.5</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <i class="bx bxs-time"></i>
+                                        <span>120 mins</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>HD</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>16+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- END MOVIE ITEM -->
+                        <!-- MOVIE ITEM -->
+                        <a href="#" class="movie-item">
+                            <img src="{% static '/images/malayalam/kitchen.jpg' %}" alt="">
+                            <div class="movie-item-content">
+                                <div class="movie-item-title">
+                                    The Great Indian Kitchen
+                                </div>
+                                <div class="movie-infos">
+                                    <div class="movie-info">
+                                        <i class="bx bxs-star"></i>
+                                        <span>9.5</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <i class="bx bxs-time"></i>
+                                        <span>120 mins</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>HD</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>16+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- END MOVIE ITEM -->
+                        <!-- MOVIE ITEM -->
+                        <a href="#" class="movie-item">
+                            <img src="{% static '/images/hindi/3.jpg' %}" alt="">
+                            <div class="movie-item-content">
+                                <div class="movie-item-title">
+                                    Dhakhad
+                                </div>
+                                <div class="movie-infos">
+                                    <div class="movie-info">
+                                        <i class="bx bxs-star"></i>
+                                        <span>9.5</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <i class="bx bxs-time"></i>
+                                        <span>120 mins</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>HD</span>
+                                    </div>
+                                    <div class="movie-info">
+                                        <span>16+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- END MOVIE ITEM -->
+                    </div>
+                </div>
+            </div>
+            <!-- END LATEST CARTOONS SECTION -->
+
+            <!-- SPECIAL MOVIE SECTION -->
+            ?
+            <br>
+            <section class="card-section">
+                <div class="container-fluid">
+                    <div class="card-group">
+                        <div class="card" style="background-color: #221f1f">
+                            <div class="card-body text-center">
+                                <p>Telugu movies</p>
+                                <p><a class="link" href="#">Acharya</a></p>
+                                <p><a class="link" href="#">Krack</a></p>
+                                <p><a class="link" href="#">uppena</a></p>
+                                <p><a class="link" href="#">Sahoo</a></p>
+                                <p><a class="link" href="#">Palasa</a></p>
+                                <p><a class="link" href="#">Maharshi</a></p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <p>Hindi movies</p>
+                                <p><a class="link" href="#">Dhoom3</a></p>
+                                <p><a class="link" href="#">Kalank</a></p>
+                                <p><a class="link" href="#">PK</a></p>
+                                <p><a class="link" href="#">3 Idoits</a></p>
+                                <p><a class="link" href="#">Masoom</a></p>
+                                <p><a class="link" href="#">Andhadun</a></p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <p>malayalam movies</p>
+                                <p><a class="link" href="#">Joji</a></p>
+                                <p><a class="link" href="#">Ayyapanum Koshiyanum</a></p>
+                                <p><a class="link" href="#">Anjaan Pathira</a></p>
+                                <p><a class="link" href="#">Virus</a></p>
+                                <p><a class="link" href="#">Jallikattu</a></p>
+                                <p><a class="link" href="#">premam</a></p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <p>Tamil movies</p>
+
+                                <p><a class="link" href="#">Ratsasan</a></p>
+                                <p><a class="link" href="#">Super Deluxe</a></p>
+                                <p><a class="link" href="#">Pariyerum Perumal</a></p>
+                                <p><a class="link" href="#">Mandela</a></p>
+                                <p><a class="link" href="#">Chakra</a></p>
+                                <p><a class="link" href="#">96</a></p>
+
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <p>Genres</p>
+                                <p><a class="link" href="#">Action</a></p>
+                                <p><a class="link" href="#">Thriller</a></p>
+                                <p><a class="link" href="#">Drama</a></p>
+                                <p><a class="link" href="#">Crime</a></p>
+                                <p><a class="link" href="#">Kids</a></p>
+                                <p><a class="link" href="#">mythological</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <!-- section -->
+            <section class="section section--border">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-xl-10">
+                            <h2 class="section__title section__title--mb"><b>Movies Now</b> – Best Place for Movies</h2>
+
+                            <p class="section__text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                                dolor in
+                                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                                sint
+                                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                                laborum."</p>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row row--grid">
+                        <!-- price -->
+                        <div class="col-12 col-md-6 col-lg-4 order-md-2 order-lg-1">
+                            <div class="price">
+                                <div class="price__item price__item--first"><span>Basic</span> <span>Free</span></div>
+                                <div class="price__item"><span><i class="icon ion-ios-checkmark"></i> 7 days</span>
+                                </div>
+                                <div class="price__item"><span><i
+                                        class="icon ion-ios-checkmark"></i> 720p Resolution</span>
+                                </div>
+                                <div class="price__item price__item--none"><span><i class="icon ion-ios-close"></i> Limited Availability</span>
+                                </div>
+                                <div class="price__item price__item--none"><span><i class="icon ion-ios-close"></i> Desktop Only</span>
+                                </div>
+                                <div class="price__item price__item--none"><span><i class="icon ion-ios-close"></i> Limited Support</span>
+                                </div>
+                                <a href="#" class="price__btn">Choose Plan</a>
+                            </div>
+                        </div>
+                        <!-- end price -->
+
+                        <!-- price -->
+                        <div class="col-12 col-md-12 col-lg-4 order-md-1 order-lg-2">
+                            <div class="price price--premium">
+                                <div class="price__item price__item--first"><span>Premium</span> <span>Rs.199 <sub>/ month</sub></span>
+                                </div>
+                                <div class="price__item"><span><i class="icon ion-ios-checkmark"></i> 1 Month</span>
+                                </div>
+                                <div class="price__item"><span><i class="icon ion-ios-checkmark"></i> Full HD</span>
+                                </div>
+                                <div class="price__item"><span><i
+                                        class="icon ion-ios-checkmark"></i> Lifetime Availability</span></div>
+                                <div class="price__item price__item--none"><span><i class="icon ion-ios-close"></i> TV & Desktop</span>
+                                </div>
+                                <div class="price__item price__item--none"><span><i class="icon ion-ios-close"></i> 24/7 Support</span>
+                                </div>
+                                <a href="#" class="price__btn">Choose Plan</a>
+                            </div>
+                        </div>
+                        <!-- end price -->
+
+                        <!-- price -->
+                        <div class="col-12 col-md-6 col-lg-4 order-md-3">
+                            <div class="price">
+                                <div class="price__item price__item--first"><span>Cinematic</span>
+                                    <span>Rs.999 <sub>/ Year</sub></span></div>
+                                <div class="price__item"><span><i class="icon ion-ios-checkmark"></i> Year</span>
+                                </div>
+                                <div class="price__item"><span><i class="icon ion-ios-checkmark"></i> Ultra HD</span>
+                                </div>
+                                <div class="price__item"><span><i
+                                        class="icon ion-ios-checkmark"></i> Lifetime Availability</span></div>
+                                <div class="price__item"><span><i class="icon ion-ios-checkmark"></i> Any Device</span>
+                                </div>
+                                <div class="price__item"><span><i
+                                        class="icon ion-ios-checkmark"></i> 24/7 Support</span></div>
+                                <a href="#" class="price__btn">Choose Plan</a>
+                            </div>
+                        </div>
+                        <!-- end price -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+{% endblock body %}

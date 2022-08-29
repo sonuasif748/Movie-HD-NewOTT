@@ -1,0 +1,97 @@
+{% extends 'dashboard/base.html' %}
+{% block content %}
+
+
+	<!-- main content -->
+	<main class="main">
+		<div class="container-fluid">
+			<div class="row">
+				<!-- main title -->
+				<div class="col-12">
+					<div class="main__title">
+						<h2>Add new item</h2>
+					</div>
+				</div>
+				<!-- end main title -->
+
+				<!-- form -->
+				<div class="col-12">
+					<form method="post" class="form" enctype="multipart/form-data">
+                        {% csrf_token %}
+						<div class="row row--form">
+							<div class="col-12 col-md-5 form__cover">
+								<div class="row row--form">
+									<div class="col-12 col-sm-6 col-md-12">
+										<div class="form__img">
+											<label for="form__img-upload">image</label>
+											<input id="form__img-upload" name="banner" type="image" accept=".png, .jpg, .jpeg">
+											<img id="form__img" src="#" alt=" ">
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-12 col-md-7 form__content">
+								<div class="row row--form">
+									<div class="col-12">
+										<input type="text" class="form__input"  name="title" placeholder="Title">
+									</div>
+
+									<div class="col-12">
+										<textarea id="text" name="text" class="form__textarea" name="description" placeholder="Description"></textarea>
+									</div>
+
+									<div class="col-12 col-sm-6 col-lg-3">
+										<input type="text" class="form__input" name="year" placeholder="Release year">
+									</div>
+
+									<div class="col-12 col-sm-6 col-lg-3">
+										<input type="text" name="" class="form__input" name="duration" placeholder="Running timed in minutes">
+									</div>
+
+									<div class="col-12 col-sm-6 col-lg-3">
+										<select class="js-example-basic-single" id="quality" name="language" >
+											<option value="#">chose lang</option>
+											<option value="telugu">telugu</option>
+											<option value="english">english</option>
+                                            <option value="hindi">hindi</option>
+										</select>
+									</div>
+
+									<div class="col-12 col-sm-6 col-lg-3">
+										<input type="text" class="form__input" placeholder="gener" name="genre">
+									</div>
+
+
+
+
+
+
+								</div>
+							</div>
+
+
+
+							<div class="col-12">
+								<div class="row row--form">
+
+
+									<div class="col-12">
+										<input type="text" class="form__input" name="vedio_link" placeholder="Or add a link">
+									</div>
+
+									<div class="col-12">
+										<input type="submit" class="form__btn" value="publish">
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<!-- end form -->
+			</div>
+		</div>
+	</main>
+	<!-- end main content -->
+
+	{% endblock %}

@@ -1,0 +1,174 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+    <!-- owl-carousel Banner Start -->
+    <section class="pt-5 pb-0">
+        <div class="container-fluid px-0">
+            <div class="row no-gutters">
+                <div class="col-12">
+                    <div class="gen-banner-movies banner-style-2">
+                        <div class="owl-carousel owl-loaded owl-drag" data-dots="false" data-nav="true"
+                             data-desk_num="1"
+                             data-lap_num="1" data-tab_num="1" data-mob_num="1" data-mob_sm="1" data-autoplay="true"
+                             data-loop="true" data-margin="0">
+                            <div class="item">
+                                <div class="gen-movie-contain-style-2 h-100">
+                                    <div class="container h-100">
+                                        <div class="row flex-row-reverse align-items-center h-100">
+                                            <div class="col-xl-6">
+                                                <div class="gen-front-image">
+                                                    {% if detail.image %}
+                                                        <img src="{{ detail.image.url }}"
+                                                             alt="owl-carousel-banner-image"
+                                                             style="width: 100%; height: 100%">
+                                                    {% endif %}
+                                                    <button type="button" data-toggle="modal" data-target="#myModal4"><a
+                                                            class="playBut popup-youtube popup-vimeo popup-gmaps">
+                                                        <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In  -->
+                                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                             width="213.7px"
+                                                             height="213.7px" viewBox="0 0 213.7 213.7"
+                                                             enable-background="new 0 0 213.7 213.7"
+                                                             xml:space="preserve">
+                                             <polygon class="triangle" id="XMLID_21_" fill="none" stroke-width="7"
+                                                      stroke-linecap="round" stroke-linejoin="round"
+                                                      stroke-miterlimit="10"
+                                                      points="
+                                                            73.5,62.5 148.5,105.8 73.5,149.1 "></polygon>
+                                                            <circle class="circle" id="XMLID_22_" fill="none"
+                                                                    stroke-width="7"
+                                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                                    stroke-miterlimit="10"
+                                                                    cx="106.8" cy="106.8" r="103.3">
+                                             </circle>
+                                          </svg>
+                                                        <span>Watch Trailer</span>
+                                                    </a></button>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="gen-movie-info">
+                                                    <h3>{{ detail.title }}</h3>
+                                                </div>
+                                                <div class="gen-movie-meta-holder">
+                                                    <ul class="gen-meta-after-title">
+                                                        <li class="gen-sen-rating">
+                                             <span>
+                                                12A</span>
+                                                        </li>
+                                                        <li class="gen-sen-rating">
+                                             <span>
+                                                9.5</span>
+                                                        </li>
+                                                    </ul>
+                                                    <p>{{ detail.discription }}</p>
+                                                    <div class="gen-meta-info">
+                                                        <ul class="gen-meta-after-excerpt">
+                                                            <li>
+                                                                <strong>Cast :</strong>
+                                                                {{ detail.actor_name }}
+                                                            </li>
+                                                            <li>
+                                                                <strong>Year :</strong>
+                                                                2020
+                                                            </li>
+                                                            <li>
+                                                                <strong>Duration :</strong>
+                                                                {{ detail.movie_length }}
+                                                            </li>
+                                                            <li>
+                                                                <strong>Genre :</strong>
+                                                                <span>
+                                                   <a href="action.html">
+                                                      {{ detail.genre }} </a>
+                                                </span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="gen-movie-action">
+                                                    <div class="gen-btn-container">
+                                                        <a href="{{ detail.movie_link }}"
+                                                           class="gen-button .gen-button-dark">
+                                                            <i aria-hidden="true" class="fas fa-play"></i> <span
+                                                                class="text">Play
+                                                                                                        Now</span>
+                                                        </a>
+                                                        <a href="{{ detail.movie_link }}"
+                                                           class="gen-button .gen-button-dark">
+                                                            <i class="fa fa-download" aria-hidden="true"></i> <span
+                                                                class="text">Download</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br><br>
+
+    <div class="modal" id="myModal4">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <iframe width="800px" height="460px" src="{{ detail.movie_link }}"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen style="margin-left: -130px;margin-right: -40px"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="section pt-0">
+        <div class="container">
+            <div class="section-header">
+                Related Movies
+                <a href="/allmovies" style="text-align: left; padding-left: 900px" ;>
+                    <span>View all</span>
+                </a>
+            </div>
+            <div class="movies-slide carousel-nav-center owl-carousel">
+                <!-- MOVIE ITEM -->
+                {% for i in mv %}
+                    <a href="{% url 'moviedetail' i.id %}" class="movie-item">
+                        {% if i.screen_shot %}
+                            <img src="{{ i.screen_shot.url }}" alt="" style="width:100%;height:100%">
+                        {% endif %}
+                        <div class="movie-item-content">
+                            <div class="movie-item-title">
+                                {{ i.title }}
+                            </div>
+                            <div class="movie-infos">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="bx bxs-time"></i>
+                                    <span>{{ i.movie_length }}</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>HD</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>16+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+                <!-- END MOVIE ITEM -->
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

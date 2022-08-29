@@ -1,0 +1,149 @@
+
+{% extends 'dashboard/base.html' %}
+{% block content %}
+	<!-- main content -->
+	<main class="main">
+		<div class="container-fluid">
+			<div class="row">
+				<!-- main title -->
+				<div class="col-12">
+					<div class="main__title">
+						<h2>Movies list</h2>
+
+							<!-- end filter sort -->
+
+							<!-- search -->
+							<form action="#" class="main__title-form ml-auto">
+								<input type="text" placeholder="Find movie / tv series..">
+								<button type="button">
+									<i class="icon ion-ios-search"></i>
+								</button>
+							</form>
+							<!-- end search -->
+						</div>
+					</div>
+				</div>
+				<!-- end main title -->
+
+				<!-- users -->
+				<div class="col-12">
+					<div class="main__table-wrap">
+						<table class="main__table">
+							<thead>
+								<tr>
+									<th>ID</th>
+									<th>TITLE</th>
+									<th>CAST</th>
+{#									<th>CATEGORY</th>#}
+									<th>GENRE</th>
+									<th>LANGUAGE</th>
+                                    <th>UPLOADER NAME</th>
+                                    <th>STATUS</th>
+									<th>ACTIONS</th>
+								</tr>
+							</thead>
+{% for i in page.object_list  %}
+							<tbody>
+								<tr>
+									<td>
+										<div class="main__table-text">{{ i.id }}</div>
+									</td>
+                                    <td>
+										<div class="main__table-text">{{ i.title }}</div>
+									</td>
+									<td>
+										<div class="main__table-text"><a href="#">{{ i.actor_name }}</a></div>
+									</td>
+{#									<td>#}
+{#										<div class="main__table-text "><i class="icon ion-ios-star"></i> {{i.category  }}</div>#}
+{#									</td>#}
+									<td>
+										<div class="main__table-text">{{ i.geners }}</div>
+									</td>
+									<td>
+										<div class="main__table-text">{{ i.language }}</div>
+									</td>
+									<td>
+										<div class="main__table-text main__table-text--green">{{ i.uploader_name }}</div>
+									</td>
+									<td>
+                                        {% if i.status == 0 %}
+										<div class="main__table-text"><a href="/update_status/1/{{ i.id }}" style="color: red">Inactive</a></div>
+                                        {% else %}
+                                        <div class="main__table-text"><a href="/update_status/0/{{ i.id }}" style="color: darkgreen">Active</a></div>
+                                        {% endif %}
+
+									</td>
+									<td>
+										<div class="main__table-btns">
+
+											<a href="{% url 'pub_update_movie' i.id %}" class="main__table-btn main__table-btn--edit">
+												<i class="icon ion-ios-create"></i>
+											</a>
+											<a href="{% url 'pub_delete_movie' i.id %}" class="main__table-btn main__table-btn--delete">
+												<i class="icon ion-ios-trash"></i>
+											</a>
+										</div>
+									</td>
+								</tr>
+                            </tbody>
+{% endfor %}
+						</table>
+					</div>
+				</div>
+				<!-- end users -->
+
+				<!-- paginator -->
+				<div class="col-12">
+					<div class="paginator-wrap">
+						<span>Page Numbers</span>
+
+						<ul class="paginator">
+							 {% if page.has_previous %}
+							<li class="paginator__item paginator__item--prev">
+								<a href="{% url 'list' %}?page={{ page.previous_page_number }}"><i class="icon ion-ios-arrow-back"></i></a>
+							</li>
+                            {% endif %}
+
+							<li class="paginator__item paginator__item--active"><a href="#">{{ page.number }}</a></li>
+							{% if page.has_next %}
+							<li class="paginator__item paginator__item--next">
+								<a href="{% url 'list' %}?page={{ page.next_page_number }}"><i class="icon ion-ios-arrow-forward"></i></a>
+							</li>
+                        {% endif %}
+						</ul>
+					</div>
+				</div>
+				<!-- end paginator -->
+			</div>
+		</div>
+	</main>
+	<!-- end main content -->
+
+	<!-- modal status -->
+	<div id="modal-status" class="zoom-anim-dialog mfp-hide modal">
+		<h6 class="modal__title">Status change</h6>
+
+		<p class="modal__text">Are you sure about immediately change status?</p>
+
+		<div class="modal__btns">
+			<button class="modal__btn modal__btn--apply" type="button">Apply</button>
+			<button class="modal__btn modal__btn--dismiss" type="button">Dismiss</button>
+		</div>
+	</div>
+	<!-- end modal status -->
+
+	<!-- modal delete -->
+	<div id="modal-delete" class="zoom-anim-dialog mfp-hide modal">
+		<h6 class="modal__title">Item delete</h6>
+
+		<p class="modal__text">Are you sure to permanently delete this item?</p>
+
+		<div class="modal__btns">
+			<button class="modal__btn modal__btn--apply" type="button">Delete</button>
+			<button class="modal__btn modal__btn--dismiss" type="button">Dismiss</button>
+		</div>
+	</div>
+	<!-- end modal delete -->
+{% endblock %}
+
